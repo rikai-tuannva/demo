@@ -5,7 +5,7 @@ name: github-project-issue-to-sheets
 on:
   workflow_dispatch:
   issues:
-    types: [opened, deleted, transferred, closed, reopened, assigned, unassigned, labeled, unlabeled]
+    types: [opened, edited, deleted, transferred, closed, reopened, assigned, unassigned, labeled, unlabeled]
 
 jobs:
     github-project-issue-to-sheets:
@@ -19,4 +19,3 @@ jobs:
             google-api-service-account-credentials: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_DATA }}
             document-id: '1Rt7XudUZw44UkZ6YDpuilmvEVV_Xvk5aEABivSYkzgk'
             sheet-name: 'GitHub Issues'
-            
